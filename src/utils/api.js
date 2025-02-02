@@ -17,7 +17,7 @@
   
 export const fetchQuizData = async () => {
     try {
-      const response = await fetch('/Uw5CrX');
+      const response = await fetch('https://api.jsonserve.com/Uw5CrX');
       console.log(response);
       
       if (!response.ok) {
