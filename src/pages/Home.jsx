@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom'; 
 
 const Home = () => {
   const navigate = useNavigate();
 
   const handleStartQuiz = () => {
-    navigate('/quiz'); // Navigates to the quiz page
+    navigate('/quiz'); 
   };
 
   return (
@@ -39,7 +39,7 @@ const styles = {
       fontSize: '3.5em',
       fontWeight: 'bold',
       marginBottom: '20px',
-      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', // Adds a shadow for better readability
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', 
     },
     description: {
       color: '#fff',
@@ -51,18 +51,18 @@ const styles = {
     startButton: {
       padding: '15px 30px',
       fontSize: '1.2em',
-      backgroundColor: '#4CAF50', // Green background for the button
+      backgroundColor: '#4CAF50', 
       color: '#fff',
       border: 'none',
       borderRadius: '8px',
       cursor: 'pointer',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Shadow to give a 3D effect
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
       transition: 'background-color 0.3s ease, transform 0.2s ease',
       fontWeight: 'bold',
     },
     startButtonHover: {
-      backgroundColor: '#45a049', // Darker green when hovering over the button
-      transform: 'scale(1.05)', // Slight zoom effect on hover
+      backgroundColor: '#45a049', 
+      transform: 'scale(1.05)', 
     },
   };
   

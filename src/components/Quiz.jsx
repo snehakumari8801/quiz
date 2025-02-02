@@ -76,7 +76,6 @@ const Quiz = () => {
         <p style={styles.question}>{description}</p>
         <ul style={styles.optionsList}>
           {options.map((option) => {
-            // Find if the current option is selected and if it's correct/incorrect
             const selectedAnswer = selectedAnswers.find(
               (answer) =>
                 answer.questionId === quizData[currentQuestion].id &&
@@ -85,7 +84,6 @@ const Quiz = () => {
             const isSelected = selectedAnswer !== undefined;
             const isOptionCorrect = isSelected && selectedAnswer.isCorrect;
 
-            // Determine background color based on the option's state
             let optionStyle = styles.option;
             if (isSelected) {
               optionStyle = isOptionCorrect ? styles.isCorrectAnswer : styles.isNotCorrect;
@@ -110,7 +108,6 @@ const Quiz = () => {
               color: showFeedback ? (selectedAnswers.some(ans => ans.isCorrect) ? 'green' : 'red') : 'black',
             }}
           >
-            {/* {showFeedback ? (selectedAnswers.find(ans => ans.isCorrect) ? 'Correct! 🎉' : 'Incorrect! ❌') : null} */}
           </div>
         )}
 
@@ -142,11 +139,11 @@ const styles = {
     width: '100%',
     padding: '10px',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Light transparent background
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', 
     borderRadius: '15px',
     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
     textAlign: 'center',
-    backdropFilter: 'blur(10px)', // Optional: gives a nice blurred effect behind the container
+    backdropFilter: 'blur(10px)',
   },
   loading: {
     textAlign: 'center',
@@ -184,21 +181,19 @@ const styles = {
   },
   isCorrectAnswer: {
     padding: '15px 10px',
-    backgroundColor: '#4CAF50', // Green for correct answers
+    backgroundColor: '#4CAF50', 
     color: '#fff',
     border: '2px solid #ddd',
     borderRadius: '8px',
     cursor: 'pointer',
-    // transform: 'scale(1.05)', // Slight zoom-in effect
   },
   isNotCorrect: {
     padding: '15px 20px',
     border: '2px solid #ddd',
     borderRadius: '8px',
     cursor: 'pointer',
-    backgroundColor: '#F44336', // Red for incorrect answers
+    backgroundColor: '#F44336', 
     color: '#fff',
-    // transform: 'scale(1.05)', // Slight zoom-in effect
   },
   feedback: {
     marginTop: '20px',
